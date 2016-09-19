@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89CFFD1B1D8F8A8F00033C9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CFFD1A1D8F8A8F00033C9A /* AppDelegate.m */; };
+		89CFFD1E1D8F8A8F00033C9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CFFD1D1D8F8A8F00033C9A /* main.m */; };
+		89CFFD231D8F8A8F00033C9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89CFFD221D8F8A8F00033C9A /* Assets.xcassets */; };
+		89CFFD261D8F8A8F00033C9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89CFFD241D8F8A8F00033C9A /* Main.storyboard */; };
+		89CFFD311D8F8A8F00033C9A /* MariboJsonFormatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CFFD301D8F8A8F00033C9A /* MariboJsonFormatTests.m */; };
+		89CFFD3C1D8F8A8F00033C9A /* MariboJsonFormatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CFFD3B1D8F8A8F00033C9A /* MariboJsonFormatUITests.m */; };
+		89CFFD921D8FC76E00033C9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CFFD8F1D8FC76E00033C9A /* ViewController.m */; };
+		89CFFD931D8FC76E00033C9A /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CFFD911D8FC76E00033C9A /* XMLDictionary.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89CFFD2D1D8F8A8F00033C9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89CFFD0E1D8F8A8F00033C9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89CFFD151D8F8A8F00033C9A;
+			remoteInfo = MariboJsonFormat;
+		};
+		89CFFD381D8F8A8F00033C9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89CFFD0E1D8F8A8F00033C9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89CFFD151D8F8A8F00033C9A;
+			remoteInfo = MariboJsonFormat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		89CFFD161D8F8A8F00033C9A /* MariboJsonFormat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MariboJsonFormat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89CFFD191D8F8A8F00033C9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		89CFFD1A1D8F8A8F00033C9A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		89CFFD1D1D8F8A8F00033C9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		89CFFD221D8F8A8F00033C9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		89CFFD251D8F8A8F00033C9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		89CFFD271D8F8A8F00033C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89CFFD2C1D8F8A8F00033C9A /* MariboJsonFormatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariboJsonFormatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89CFFD301D8F8A8F00033C9A /* MariboJsonFormatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MariboJsonFormatTests.m; sourceTree = "<group>"; };
+		89CFFD321D8F8A8F00033C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89CFFD371D8F8A8F00033C9A /* MariboJsonFormatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MariboJsonFormatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89CFFD3B1D8F8A8F00033C9A /* MariboJsonFormatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MariboJsonFormatUITests.m; sourceTree = "<group>"; };
+		89CFFD3D1D8F8A8F00033C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89CFFD8E1D8FC76E00033C9A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		89CFFD8F1D8FC76E00033C9A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		89CFFD901D8FC76E00033C9A /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		89CFFD911D8FC76E00033C9A /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89CFFD131D8F8A8F00033C9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89CFFD291D8F8A8F00033C9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89CFFD341D8F8A8F00033C9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89CFFD0D1D8F8A8F00033C9A = {
+			isa = PBXGroup;
+			children = (
+				89CFFD181D8F8A8F00033C9A /* MariboJsonFormat */,
+				89CFFD2F1D8F8A8F00033C9A /* MariboJsonFormatTests */,
+				89CFFD3A1D8F8A8F00033C9A /* MariboJsonFormatUITests */,
+				89CFFD171D8F8A8F00033C9A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89CFFD171D8F8A8F00033C9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89CFFD161D8F8A8F00033C9A /* MariboJsonFormat.app */,
+				89CFFD2C1D8F8A8F00033C9A /* MariboJsonFormatTests.xctest */,
+				89CFFD371D8F8A8F00033C9A /* MariboJsonFormatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89CFFD181D8F8A8F00033C9A /* MariboJsonFormat */ = {
+			isa = PBXGroup;
+			children = (
+				89CFFD191D8F8A8F00033C9A /* AppDelegate.h */,
+				89CFFD1A1D8F8A8F00033C9A /* AppDelegate.m */,
+				89CFFD8E1D8FC76E00033C9A /* ViewController.h */,
+				89CFFD8F1D8FC76E00033C9A /* ViewController.m */,
+				89CFFD901D8FC76E00033C9A /* XMLDictionary.h */,
+				89CFFD911D8FC76E00033C9A /* XMLDictionary.m */,
+				89CFFD221D8F8A8F00033C9A /* Assets.xcassets */,
+				89CFFD241D8F8A8F00033C9A /* Main.storyboard */,
+				89CFFD271D8F8A8F00033C9A /* Info.plist */,
+				89CFFD1C1D8F8A8F00033C9A /* Supporting Files */,
+			);
+			path = MariboJsonFormat;
+			sourceTree = "<group>";
+		};
+		89CFFD1C1D8F8A8F00033C9A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89CFFD1D1D8F8A8F00033C9A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89CFFD2F1D8F8A8F00033C9A /* MariboJsonFormatTests */ = {
+			isa = PBXGroup;
+			children = (
+				89CFFD301D8F8A8F00033C9A /* MariboJsonFormatTests.m */,
+				89CFFD321D8F8A8F00033C9A /* Info.plist */,
+			);
+			path = MariboJsonFormatTests;
+			sourceTree = "<group>";
+		};
+		89CFFD3A1D8F8A8F00033C9A /* MariboJsonFormatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				89CFFD3B1D8F8A8F00033C9A /* MariboJsonFormatUITests.m */,
+				89CFFD3D1D8F8A8F00033C9A /* Info.plist */,
+			);
+			path = MariboJsonFormatUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89CFFD151D8F8A8F00033C9A /* MariboJsonFormat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89CFFD401D8F8A8F00033C9A /* Build configuration list for PBXNativeTarget "MariboJsonFormat" */;
+			buildPhases = (
+				89CFFD121D8F8A8F00033C9A /* Sources */,
+				89CFFD131D8F8A8F00033C9A /* Frameworks */,
+				89CFFD141D8F8A8F00033C9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MariboJsonFormat;
+			productName = MariboJsonFormat;
+			productReference = 89CFFD161D8F8A8F00033C9A /* MariboJsonFormat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		89CFFD2B1D8F8A8F00033C9A /* MariboJsonFormatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89CFFD431D8F8A8F00033C9A /* Build configuration list for PBXNativeTarget "MariboJsonFormatTests" */;
+			buildPhases = (
+				89CFFD281D8F8A8F00033C9A /* Sources */,
+				89CFFD291D8F8A8F00033C9A /* Frameworks */,
+				89CFFD2A1D8F8A8F00033C9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89CFFD2E1D8F8A8F00033C9A /* PBXTargetDependency */,
+			);
+			name = MariboJsonFormatTests;
+			productName = MariboJsonFormatTests;
+			productReference = 89CFFD2C1D8F8A8F00033C9A /* MariboJsonFormatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		89CFFD361D8F8A8F00033C9A /* MariboJsonFormatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89CFFD461D8F8A8F00033C9A /* Build configuration list for PBXNativeTarget "MariboJsonFormatUITests" */;
+			buildPhases = (
+				89CFFD331D8F8A8F00033C9A /* Sources */,
+				89CFFD341D8F8A8F00033C9A /* Frameworks */,
+				89CFFD351D8F8A8F00033C9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89CFFD391D8F8A8F00033C9A /* PBXTargetDependency */,
+			);
+			name = MariboJsonFormatUITests;
+			productName = MariboJsonFormatUITests;
+			productReference = 89CFFD371D8F8A8F00033C9A /* MariboJsonFormatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89CFFD0E1D8F8A8F00033C9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Yuri;
+				TargetAttributes = {
+					89CFFD151D8F8A8F00033C9A = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = P3946UUK47;
+						ProvisioningStyle = Automatic;
+					};
+					89CFFD2B1D8F8A8F00033C9A = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = P3946UUK47;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 89CFFD151D8F8A8F00033C9A;
+					};
+					89CFFD361D8F8A8F00033C9A = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = P3946UUK47;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 89CFFD151D8F8A8F00033C9A;
+					};
+				};
+			};
+			buildConfigurationList = 89CFFD111D8F8A8F00033C9A /* Build configuration list for PBXProject "MariboJsonFormat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 89CFFD0D1D8F8A8F00033C9A;
+			productRefGroup = 89CFFD171D8F8A8F00033C9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89CFFD151D8F8A8F00033C9A /* MariboJsonFormat */,
+				89CFFD2B1D8F8A8F00033C9A /* MariboJsonFormatTests */,
+				89CFFD361D8F8A8F00033C9A /* MariboJsonFormatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89CFFD141D8F8A8F00033C9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CFFD231D8F8A8F00033C9A /* Assets.xcassets in Resources */,
+				89CFFD261D8F8A8F00033C9A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89CFFD2A1D8F8A8F00033C9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89CFFD351D8F8A8F00033C9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89CFFD121D8F8A8F00033C9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CFFD921D8FC76E00033C9A /* ViewController.m in Sources */,
+				89CFFD931D8FC76E00033C9A /* XMLDictionary.m in Sources */,
+				89CFFD1E1D8F8A8F00033C9A /* main.m in Sources */,
+				89CFFD1B1D8F8A8F00033C9A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89CFFD281D8F8A8F00033C9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CFFD311D8F8A8F00033C9A /* MariboJsonFormatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89CFFD331D8F8A8F00033C9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CFFD3C1D8F8A8F00033C9A /* MariboJsonFormatUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89CFFD2E1D8F8A8F00033C9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89CFFD151D8F8A8F00033C9A /* MariboJsonFormat */;
+			targetProxy = 89CFFD2D1D8F8A8F00033C9A /* PBXContainerItemProxy */;
+		};
+		89CFFD391D8F8A8F00033C9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89CFFD151D8F8A8F00033C9A /* MariboJsonFormat */;
+			targetProxy = 89CFFD381D8F8A8F00033C9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		89CFFD241D8F8A8F00033C9A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89CFFD251D8F8A8F00033C9A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89CFFD3E1D8F8A8F00033C9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		89CFFD3F1D8F8A8F00033C9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		89CFFD411D8F8A8F00033C9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P3946UUK47;
+				INFOPLIST_FILE = MariboJsonFormat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Yuri.MariboJsonFormat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		89CFFD421D8F8A8F00033C9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P3946UUK47;
+				INFOPLIST_FILE = MariboJsonFormat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Yuri.MariboJsonFormat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		89CFFD441D8F8A8F00033C9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P3946UUK47;
+				INFOPLIST_FILE = MariboJsonFormatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Yuri.MariboJsonFormatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MariboJsonFormat.app/Contents/MacOS/MariboJsonFormat";
+			};
+			name = Debug;
+		};
+		89CFFD451D8F8A8F00033C9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P3946UUK47;
+				INFOPLIST_FILE = MariboJsonFormatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Yuri.MariboJsonFormatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MariboJsonFormat.app/Contents/MacOS/MariboJsonFormat";
+			};
+			name = Release;
+		};
+		89CFFD471D8F8A8F00033C9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P3946UUK47;
+				INFOPLIST_FILE = MariboJsonFormatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Yuri.MariboJsonFormatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MariboJsonFormat;
+			};
+			name = Debug;
+		};
+		89CFFD481D8F8A8F00033C9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P3946UUK47;
+				INFOPLIST_FILE = MariboJsonFormatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Yuri.MariboJsonFormatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MariboJsonFormat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89CFFD111D8F8A8F00033C9A /* Build configuration list for PBXProject "MariboJsonFormat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89CFFD3E1D8F8A8F00033C9A /* Debug */,
+				89CFFD3F1D8F8A8F00033C9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89CFFD401D8F8A8F00033C9A /* Build configuration list for PBXNativeTarget "MariboJsonFormat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89CFFD411D8F8A8F00033C9A /* Debug */,
+				89CFFD421D8F8A8F00033C9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89CFFD431D8F8A8F00033C9A /* Build configuration list for PBXNativeTarget "MariboJsonFormatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89CFFD441D8F8A8F00033C9A /* Debug */,
+				89CFFD451D8F8A8F00033C9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89CFFD461D8F8A8F00033C9A /* Build configuration list for PBXNativeTarget "MariboJsonFormatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89CFFD471D8F8A8F00033C9A /* Debug */,
+				89CFFD481D8F8A8F00033C9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89CFFD0E1D8F8A8F00033C9A /* Project object */;
+}
