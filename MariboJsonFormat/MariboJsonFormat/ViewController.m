@@ -95,6 +95,10 @@
     [self deleteMutableString:_classMString];
     [self deleteMutableString:_classSwiftString];
     
+    self.classTV.string = @"";
+    self.classMTV.string = @"";
+    self.classSwiftTV.string = @"";
+    
     _classPrefixName = self.classPrefixTF.stringValue ? self.classPrefixTF.stringValue : kDEFAULT_CLASS_PREFIX;
     NSString *className = self.classNameTF.stringValue;
     NSString *jsonStr = self.jsonTV.string;
