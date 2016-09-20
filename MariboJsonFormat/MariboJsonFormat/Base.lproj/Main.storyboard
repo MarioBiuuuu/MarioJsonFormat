@@ -666,8 +666,8 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="MarioJsonFormat" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -695,7 +695,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="saveToLocal:" target="XfG-lQ-9wD" id="uXA-o8-V6H"/>
+                                    <action selector="saveToLocal:" target="XfG-lQ-9wD" id="gqY-xd-Ndw"/>
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jh7-Lp-BRe">
@@ -713,7 +713,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="isCreateSwift:" target="XfG-lQ-9wD" id="axt-cg-yNx"/>
+                                    <action selector="isCreateSwift:" target="XfG-lQ-9wD" id="u8r-tw-jrT"/>
                                 </connections>
                             </button>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmX-VK-lxi" userLabel="JSONObject Input">
@@ -790,7 +790,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="gernateFormatString:" target="XfG-lQ-9wD" id="1eJ-MT-fUh"/>
+                                    <action selector="gernateFormatString:" target="XfG-lQ-9wD" id="ycj-ga-oB0"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5kB-Mb-hfL">
@@ -800,7 +800,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="resetJsonInput:" target="XfG-lQ-9wD" id="0rc-eM-i92"/>
+                                    <action selector="resetJsonInput:" target="XfG-lQ-9wD" id="iXh-G9-ERS"/>
                                 </connections>
                             </button>
                             <scrollView wantsLayer="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnm-6M-dpR">
@@ -867,16 +867,16 @@
                                 </textFieldCell>
                             </textField>
                             <scrollView wantsLayer="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V92-Xh-IfS">
-                                <rect key="frame" x="418" y="43" width="545" height="195"/>
+                                <rect key="frame" x="418" y="42" width="545" height="196"/>
                                 <clipView key="contentView" id="QUc-JB-PHG">
-                                    <rect key="frame" x="1" y="1" width="528" height="193"/>
+                                    <rect key="frame" x="1" y="1" width="528" height="194"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="e2K-rh-T4M">
-                                            <rect key="frame" x="0.0" y="-1" width="528" height="193"/>
+                                            <rect key="frame" x="0.0" y="-1" width="528" height="194"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="528" height="193"/>
+                                            <size key="minSize" width="528" height="194"/>
                                             <size key="maxSize" width="545" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
@@ -888,7 +888,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="6od-Dp-OLQ">
-                                    <rect key="frame" x="529" y="1" width="15" height="193"/>
+                                    <rect key="frame" x="529" y="1" width="15" height="194"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -963,21 +963,21 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="checkBoxBtn" destination="oRz-Dm-OMf" id="Yhz-ts-NUE"/>
-                        <outlet property="classMTV" destination="Mvo-4W-piO" id="v76-5D-5h2"/>
-                        <outlet property="classMTitle" destination="vGL-mi-5br" id="UfF-66-fC1"/>
-                        <outlet property="classNameTF" destination="MnA-bu-X8X" id="cni-lD-EfN"/>
-                        <outlet property="classPrefixTF" destination="F5r-Jr-F3O" id="zeE-MC-P5N"/>
-                        <outlet property="classSwiftTV" destination="e2K-rh-T4M" id="GgG-Hr-QGM"/>
-                        <outlet property="classSwiftTitle" destination="o2R-am-kCN" id="CZ4-sJ-QXu"/>
-                        <outlet property="classTV" destination="dFK-XC-0ng" id="A4Q-8z-IJX"/>
-                        <outlet property="classTitle" destination="5OV-C9-30Y" id="0o4-vr-OTh"/>
-                        <outlet property="jsonTV" destination="Hxk-1R-tCm" id="tB9-x2-51L"/>
+                        <outlet property="checkBoxBtn" destination="oRz-Dm-OMf" id="jrG-R3-xcH"/>
+                        <outlet property="classMTV" destination="Mvo-4W-piO" id="zeq-YK-H6C"/>
+                        <outlet property="classMTitle" destination="vGL-mi-5br" id="mvi-io-0ff"/>
+                        <outlet property="classNameTF" destination="MnA-bu-X8X" id="ZFm-Od-AIj"/>
+                        <outlet property="classPrefixTF" destination="F5r-Jr-F3O" id="UcL-QD-uZt"/>
+                        <outlet property="classSwiftTV" destination="e2K-rh-T4M" id="EtW-4W-5KB"/>
+                        <outlet property="classSwiftTitle" destination="o2R-am-kCN" id="DhD-kk-661"/>
+                        <outlet property="classTV" destination="dFK-XC-0ng" id="eSm-FV-ViA"/>
+                        <outlet property="classTitle" destination="5OV-C9-30Y" id="zME-9U-7Ki"/>
+                        <outlet property="jsonTV" destination="Hxk-1R-tCm" id="CI4-bx-rKS"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="934"/>
+            <point key="canvasLocation" x="101" y="880"/>
         </scene>
     </scenes>
 </document>
