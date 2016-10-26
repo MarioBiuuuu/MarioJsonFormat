@@ -12,8 +12,8 @@
 #define kDEFAULT_CLASS_NAME     @("Mario")
 #define kDEFAULT_CLASS_PREFIX   @("Mario")
 #define kCLASS_H           @("\n@interface %@ :NSObject\n%@\n@end\n")
-#define kPROPERTY(property)       ((property) == 'c' ? @("@property (nonatomic ,copy) %@ *%@;\n") : @("@property (nonatomic , strong) %@ *%@;\n"))
-#define kASSIGN_PROPERTY   @("@property (nonatomic ,assign) %@ %@;\n")
+#define kPROPERTY(property)       ((property) == 'c' ? @("@property (nonatomic, copy) %@ *%@;\n") : @("@property (nonatomic ,strong) %@ *%@;\n"))
+#define kASSIGN_PROPERTY   @("@property (nonatomic, assign) %@ %@;\n")
 #define kCLASS_M           @("@implementation %@\n\n@end\n")
 #define kCLASS_Prefix_M    @("@implementation %@\n+ (NSString *)prefix;\n@end\n\n")
 #define kCLASS_SWIFT       @("\n@objc(%@)\nclass %@ :NSObject {\n%@\n}")
@@ -259,7 +259,7 @@
 - (NSString *)formatDataWithDict:(NSDictionary *)object key:(NSString *)key swift:(BOOL)isSwift{
     if (object) {
         NSMutableString  *property = [NSMutableString string];
-        if([object isKindOfClass:[NSDictionary class]]){
+        if([object isKindOfClass:[NSDictionary class]]) {
             
             NSDictionary *dict = object;
             NSInteger count = dict.count;
@@ -314,7 +314,7 @@
                         } else if (strcmp([subObject objCType], @encode(double)) == 0) {
                             [property appendFormat:kASSIGN_PROPERTY, @"double", key];
                         } else if (strcmp([subObject objCType], @encode(BOOL)) == 0) {
-                            [property appendFormat:kASSIGN_PROPERTY, @"Bool", key];
+                            [property appendFormat:kASSIGN_PROPERTY, @"BOOL", key];
                         } else {
                             [property appendFormat:kASSIGN_PROPERTY, @"NSInteger", key];
                         }
@@ -325,9 +325,9 @@
                         } else if (strcmp([subObject objCType], @encode(double)) == 0) {
                             [property appendFormat:kPROPERTY_SWIFT, key, @"Double"];
                         } else if (strcmp([subObject objCType], @encode(BOOL)) == 0) {
-                            [property appendFormat:kPROPERTY_SWIFT, key, @"Bool"];
+                            [property appendFormat:kPROPERTY_SWIFT, key, @"BOOL"];
                         } else {
-                            [property appendFormat:kPROPERTY_SWIFT, key, @"Int"];
+                            [property appendFormat:kPROPERTY_SWIFT, key, @"int"];
                         }
                     }
                 } else {
