@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -708,7 +709,7 @@
                             </textField>
                             <button horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="oRz-Dm-OMf">
                                 <rect key="frame" x="6" y="9" width="130" height="18"/>
-                                <buttonCell key="cell" type="check" title="Swift Model Class" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="QVl-Lj-OgV">
+                                <buttonCell key="cell" type="check" title="Swift Model Class" bezelStyle="regularSquare" imagePosition="left" inset="2" id="QVl-Lj-OgV">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -914,6 +915,17 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3ps-BE-J7R">
+                                <rect key="frame" x="444" y="8" width="130" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="LjA-FH-2ai"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Base class name" drawsBackground="YES" id="sbA-ZY-lV2">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="www-dJ-61P" firstAttribute="baseline" secondItem="aUC-P9-pUD" secondAttribute="baseline" id="1Bw-mV-j30"/>
@@ -926,6 +938,7 @@
                             <constraint firstItem="jh7-Lp-BRe" firstAttribute="baseline" secondItem="www-dJ-61P" secondAttribute="baseline" id="A37-Ik-h8v"/>
                             <constraint firstAttribute="trailing" secondItem="V92-Xh-IfS" secondAttribute="trailing" constant="10" id="A98-CJ-eOO"/>
                             <constraint firstItem="jh7-Lp-BRe" firstAttribute="top" secondItem="xVg-bM-34B" secondAttribute="top" constant="8" id="Czz-dR-vOF"/>
+                            <constraint firstItem="3ps-BE-J7R" firstAttribute="centerY" secondItem="F5r-Jr-F3O" secondAttribute="centerY" id="Dx3-jo-a2l"/>
                             <constraint firstItem="MnA-bu-X8X" firstAttribute="top" secondItem="xmX-VK-lxi" secondAttribute="bottom" constant="8" symbolic="YES" id="F4l-rf-zim"/>
                             <constraint firstItem="5OV-C9-30Y" firstAttribute="leading" secondItem="xmX-VK-lxi" secondAttribute="trailing" constant="24" id="Gin-25-nzF"/>
                             <constraint firstItem="V92-Xh-IfS" firstAttribute="top" secondItem="o2R-am-kCN" secondAttribute="bottom" id="Jfx-zq-AUc"/>
@@ -944,6 +957,7 @@
                             <constraint firstItem="F5r-Jr-F3O" firstAttribute="baseline" secondItem="tQg-5Q-GXJ" secondAttribute="baseline" id="gFd-8D-gB8"/>
                             <constraint firstItem="V92-Xh-IfS" firstAttribute="height" secondItem="xVg-bM-34B" secondAttribute="height" multiplier="0.333" constant="-50" id="h7P-Bq-r1L"/>
                             <constraint firstItem="5OV-C9-30Y" firstAttribute="top" secondItem="www-dJ-61P" secondAttribute="bottom" constant="9" id="hj2-eX-2AX"/>
+                            <constraint firstItem="3ps-BE-J7R" firstAttribute="leading" secondItem="F5r-Jr-F3O" secondAttribute="trailing" constant="20" id="kRB-fM-t3x"/>
                             <constraint firstAttribute="trailing" secondItem="Lnm-6M-dpR" secondAttribute="trailing" constant="10" id="lFS-6N-zRk"/>
                             <constraint firstItem="vGL-mi-5br" firstAttribute="leading" secondItem="xmX-VK-lxi" secondAttribute="trailing" constant="24" id="lN1-Fd-5Iy"/>
                             <constraint firstItem="F5r-Jr-F3O" firstAttribute="top" secondItem="tQg-5Q-GXJ" secondAttribute="top" id="oTJ-bB-9K1"/>
@@ -963,6 +977,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="baseClassNameTF" destination="3ps-BE-J7R" id="BOJ-Zy-QxP"/>
                         <outlet property="checkBoxBtn" destination="oRz-Dm-OMf" id="jrG-R3-xcH"/>
                         <outlet property="classMTV" destination="Mvo-4W-piO" id="zeq-YK-H6C"/>
                         <outlet property="classMTitle" destination="vGL-mi-5br" id="mvi-io-0ff"/>

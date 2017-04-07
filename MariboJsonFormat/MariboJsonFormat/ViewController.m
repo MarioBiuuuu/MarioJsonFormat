@@ -17,6 +17,7 @@
 #define kCLASS_M           @("@implementation %@\n\n@end\n")
 #define kCLASS_Prefix_M    @("@implementation %@\n+ (NSString *)prefix;\n@end\n\n")
 #define kCLASS_SWIFT       @("\n@objc(%@)\nclass %@ :NSObject {\n%@\n}")
+#define kBASE_CLASS_SWIFT       @("\n@objc(%@)\nclass %@ :%@ {\n%@\n}")
 #define kPROPERTY_SWIFT    @("var %@: %@!\n")
 #define kFILE_HEADER       @("//\n//  %@\n//  MariboJsonFormat\n//\n//  Version 1.0\n//\n//  在使用中如果遇到什么问题，请联系作者tobe1016@163.com\n//  仓库地址 (github) https://github.com/MarioBiuuuu/MarioJsonFormat\n//\n\n")
 
@@ -37,6 +38,7 @@
 @property (nonatomic ,strong) IBOutlet NSTextField *classTitle;
 @property (nonatomic ,strong) IBOutlet NSTextField *classMTitle;
 @property (nonatomic ,strong) IBOutlet NSTextField *classSwiftTitle;
+@property (weak) IBOutlet NSTextField *baseClassNameTF;
 
 @end
 
@@ -126,13 +128,29 @@
             [_classString appendFormat:kFILE_HEADER, hName];
             [_classMString appendFormat:kFILE_HEADER, mName];
             [_classSwiftString appendFormat:kFILE_HEADER, sName];
-            
-            [_classString appendString:@"#import <Foundation/Foundation.h>\n"];
+            if ([self.baseClassNameTF.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""].length > 0) {
+                NSString *baseClassHeaderStr = [NSString stringWithFormat:@"#import \"%@.h\"", [self.baseClassNameTF.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""]];
+                [_classString appendString:baseClassHeaderStr];
+                [_classSwiftString appendFormat:@"import %@.h\n", [self.baseClassNameTF.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""]];
+            } else {
+                [_classString appendString:@"#import <Foundation/Foundation.h>\n"];
+                [_classSwiftString appendString:@"import UIKit\n"];
+            }
             [_classMString appendString:[NSString stringWithFormat:@"#import \"%@\"\n", hName]];
-            [_classSwiftString appendString:@"import UIKit\n"];
             
-            [_classSwiftString appendFormat:kCLASS_SWIFT, className, className, [self formatDataWithDict:dataDict key:@"" swift:YES]];
-            [_classString appendFormat:kCLASS_H, className, [self formatDataWithDict:dataDict key:@"" swift:NO]];
+            if ([self.baseClassNameTF.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""].length > 0) {
+                [_classSwiftString appendFormat:kBASE_CLASS_SWIFT, className, className, [self.baseClassNameTF.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""],[self formatDataWithDict:dataDict key:@"" swift:YES]];
+
+                NSString *beginStr =[NSString stringWithFormat:@"\n@interface %@ : %@", className, [self.baseClassNameTF.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""]];
+                NSString *endStr = [NSString stringWithFormat:@"\n%@\n@end\n", [self formatDataWithDict:dataDict key:@"" swift:NO]];
+                [_classString appendString:beginStr];
+                [_classString appendString:endStr];
+            } else {
+                [_classSwiftString appendFormat:kCLASS_SWIFT, className, className, [self formatDataWithDict:dataDict key:@"" swift:YES]];
+
+                [_classString appendFormat:kCLASS_H, className, [self formatDataWithDict:dataDict key:@"" swift:NO]];
+
+            }
             if (_classPrefixName.length > 0) {
                 [_classMString appendFormat:kCLASS_Prefix_M, className];
             } else {
@@ -276,7 +294,19 @@
                     NSString *classContent = [self formatDataWithDict:subObject key:key swift:isSwift];
                     if (isSwift == 0) {
                         [property appendFormat:kPROPERTY('c'), className, key];
-                        [_classString appendFormat:kCLASS_H, className, classContent];
+//                        [_classString appendFormat:kCLASS_H, className, classContent];
+                        
+                        if ([self.baseClassNameTF.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""].length > 0) {
+                            
+                            NSString *beginStr =[NSString stringWithFormat:@"\n@interface %@ : %@", className, [self.baseClassNameTF.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""]];
+                            NSString *endStr = [NSString stringWithFormat:@"\n%@\n@end\n", classContent];
+                            [_classString appendString:beginStr];
+                            [_classString appendString:endStr];
+                        } else {
+                            [_classString appendFormat:kCLASS_H, className, classContent];
+                            
+                        }
+                        
                         if (_classPrefixName.length > 0) {
                             [_classMString appendFormat:kCLASS_Prefix_M, className];
                         } else {
@@ -284,13 +314,29 @@
                         }
                     } else {
                         [property appendFormat:kPROPERTY_SWIFT, key, className];
-                        [_classSwiftString appendFormat:kCLASS_SWIFT,className, className, classContent];
+                        if ([self.baseClassNameTF.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""].length > 0) {
+                            [_classSwiftString appendFormat:kBASE_CLASS_SWIFT, className, className, [self.baseClassNameTF.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""], classContent];
+
+                        } else {
+                            [_classSwiftString appendFormat:kCLASS_SWIFT,className, className, classContent];
+
+                        }
                     }
                 } else if ([subObject isKindOfClass:[NSArray class]]) {
                     NSString * classContent = [self formatDataWithDict:subObject key:key swift:isSwift];
                     if(isSwift == 0){
                         [property appendFormat:kPROPERTY('s'),[NSString stringWithFormat:@"NSArray<%@ *>",className], key];
-                        [_classString appendFormat:kCLASS_H,className, classContent];
+//                        [_classString appendFormat:kCLASS_H,className, classContent];
+                        if ([self.baseClassNameTF.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""].length > 0) {
+                            
+                            NSString *beginStr =[NSString stringWithFormat:@"\n@interface %@ : %@", className, [self.baseClassNameTF.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""]];
+                            NSString *endStr = [NSString stringWithFormat:@"\n%@\n@end\n", classContent];
+                            [_classString appendString:beginStr];
+                            [_classString appendString:endStr];
+                        } else {
+                            [_classString appendFormat:kCLASS_H, className, classContent];
+                            
+                        }
                         if (_classPrefixName.length > 0) {
                             [_classMString appendFormat:kCLASS_Prefix_M, className];
                         }else {
@@ -298,7 +344,14 @@
                         }
                     }else{
                         [property appendFormat:kPROPERTY_SWIFT,key,[NSString stringWithFormat:@"[%@]", className]];
-                        [_classSwiftString appendFormat:kCLASS_SWIFT, className, className, classContent];
+//                        [_classSwiftString appendFormat:kCLASS_SWIFT, className, className, classContent];
+                        if ([self.baseClassNameTF.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""].length > 0) {
+                            [_classSwiftString appendFormat:kBASE_CLASS_SWIFT, className, className, [self.baseClassNameTF.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""], classContent];
+                            
+                        } else {
+                            [_classSwiftString appendFormat:kCLASS_SWIFT,className, className, classContent];
+                            
+                        }
                     }
                 } else if ([subObject isKindOfClass:[NSString class]]){
                     if(isSwift == 0){
