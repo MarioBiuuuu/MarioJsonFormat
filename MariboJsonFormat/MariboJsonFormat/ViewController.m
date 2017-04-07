@@ -19,7 +19,7 @@
 #define kCLASS_SWIFT       @("\n@objc(%@)\nclass %@ :NSObject {\n%@\n}")
 #define kBASE_CLASS_SWIFT       @("\n@objc(%@)\nclass %@ :%@ {\n%@\n}")
 #define kPROPERTY_SWIFT    @("var %@: %@!\n")
-#define kFILE_HEADER       @("//\n//  %@\n//  MariboJsonFormat\n//\n//  Version 1.0\n//\n//  在使用中如果遇到什么问题，请联系作者tobe1016@163.com\n//  仓库地址 (github) https://github.com/MarioBiuuuu/MarioJsonFormat\n//\n\n")
+#define kFILE_HEADER       @("//\n//  %@\n//  MariboJsonFormat\n//\n//  Version 2.0\n//\n//  在使用中如果遇到什么问题，请联系作者tobe1016@163.com\n//  仓库地址 (github) https://github.com/MarioBiuuuu/MarioJsonFormat\n//\n\n")
 
 @interface ViewController () {
     NSMutableString *_classString;
