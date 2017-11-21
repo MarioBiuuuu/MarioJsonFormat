@@ -12,7 +12,7 @@
 #define kDEFAULT_CLASS_NAME     @("Mario")
 #define kDEFAULT_CLASS_PREFIX   @("Mario")
 #define kCLASS_H           @("\n@interface %@ :NSObject\n%@\n@end\n")
-#define kPROPERTY(property)       ((property) == 'c' ? @("@property (nonatomic, copy) %@ *%@;\n") : @("@property (nonatomic ,strong) %@ *%@;\n"))
+#define kPROPERTY(property)       ((property) == 'c' ? @("@property (nonatomic, copy) %@ *%@;\n") : @("@property (nonatomic, strong) %@ *%@;\n"))
 #define kASSIGN_PROPERTY   @("@property (nonatomic, assign) %@ %@;\n")
 #define kCLASS_M           @("@implementation %@\n\n@end\n")
 #define kCLASS_Prefix_M    @("@implementation %@\n+ (NSString *)prefix;\n@end\n\n")
